@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FocusFlow — A calmer way to get things done</title>
+  <meta name="description" content="FocusFlow is a calm, focused productivity platform for building habits, tracking goals, and protecting deep work.">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom styles -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- ============ NAVBAR ============ -->
+  <nav class="navbar navbar-expand-lg ff-navbar fixed-top" id="mainNav" aria-label="Primary">
+    <div class="container">
+      <a class="navbar-brand ff-brand" href="#home">
+        <span class="ff-brand-mark" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg>
+        </span>
+        FocusFlow
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+          <li class="nav-item"><a class="nav-link ff-nav-link" href="#why">Why Focus</a></li>
+          <li class="nav-item"><a class="nav-link ff-nav-link" href="#habits">Habits</a></li>
+          <li class="nav-item"><a class="nav-link ff-nav-link" href="#tools">Tools</a></li>
+          <li class="nav-item"><a class="nav-link ff-nav-link" href="#goals">Plan a Goal</a></li>
+          <li class="nav-item"><a class="nav-link ff-nav-link" href="#stories">Stories</a></li>
+          <li class="nav-item ms-lg-2">
+            <a class="btn ff-btn-primary ff-btn-sm" href="#habits">Get Started</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main id="main-content">
+
+    <!-- ============ HERO ============ -->
+    <section class="ff-hero" id="home">
+      <div class="container">
+        <div class="row align-items-center gy-5">
+
+          <div class="col-lg-6 ff-fade-up">
+            <p class="ff-eyebrow ff-eyebrow-blue">A calmer way to get things done</p>
+            <h1 class="ff-h1">Find your focus.<br>Build your flow.</h1>
+            <p class="ff-lead">FocusFlow blends habit tracking, deep-work timers, and gentle goal planning into one calm space — so progress feels steady, never stressful.</p>
+            <div class="d-flex flex-wrap gap-3 mt-4">
+              <a href="#habits" class="btn ff-btn-primary ff-btn-lg">Start Focusing</a>
+              <a href="#why" class="btn ff-btn-ghost ff-btn-lg">See how it works</a>
+            </div>
+            <div class="ff-hero-trust mt-5">
+              <span class="ff-trust-dot"></span> Built for students, makers, and anyone re-learning how to focus
+            </div>
+          </div>
+
+          <div class="col-lg-6 ff-fade-up" style="--ff-delay:120ms">
+            <div class="ff-dashboard" role="img" aria-label="FocusFlow dashboard showing a productivity score of 87 percent, 12 of 15 tasks completed, 4.5 focus hours, and 3 of 4 weekly goals met">
+              <div class="ff-dashboard-head">
+                <div>
+                  <p class="ff-dash-eyebrow">Today's focus</p>
+                  <p class="ff-dash-date">Wednesday, June 17</p>
+                </div>
+                <span class="ff-dash-pill">Live</span>
+              </div>
+
+              <div class="ff-ring-wrap">
+                <svg class="ff-ring" viewBox="0 0 160 160" aria-hidden="true">
+                  <circle class="ff-ring-track" cx="80" cy="80" r="68"></circle>
+                  <circle class="ff-ring-progress" id="heroRing" cx="80" cy="80" r="68" data-value="87"></circle>
+                </svg>
+                <div class="ff-ring-center">
+                  <span class="ff-ring-number" id="heroRingNumber">0</span>
+                  <span class="ff-ring-percent">%</span>
+                  <p class="ff-ring-label">Productivity score</p>
+                </div>
+              </div>
+
+              <div class="ff-stat-grid">
+                <div class="ff-stat-chip" style="--ff-float-delay:0s">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"></path><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path></svg>
+                  <span class="ff-stat-num" data-count="12">0</span><span class="ff-stat-suffix">/15</span>
+                  <p>Tasks completed</p>
+                </div>
+                <div class="ff-stat-chip" style="--ff-float-delay:.3s">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3.5 2"></path></svg>
+                  <span class="ff-stat-num" data-count="4.5" data-decimal="1">0</span><span class="ff-stat-suffix">h</span>
+                  <p>Focus hours</p>
+                </div>
+                <div class="ff-stat-chip" style="--ff-float-delay:.6s">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l2.9 6.4 7 .7-5.2 4.8 1.5 6.9L12 17.6l-6.2 3.2 1.5-6.9L2.1 9.1l7-.7z"></path></svg>
+                  <span class="ff-stat-num" data-count="3">0</span><span class="ff-stat-suffix">/4</span>
+                  <p>Weekly goals</p>
+                </div>
+                <div class="ff-stat-chip" style="--ff-float-delay:.9s">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"></path><path d="M7 15l4-5 3 3 5-7"></path></svg>
+                  <span class="ff-stat-num" data-count="87">0</span><span class="ff-stat-suffix">%</span>
+                  <p>Productivity</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ WHY FOCUS MATTERS ============ -->
+    <section class="ff-section" id="why">
+      <div class="container">
+        <div class="ff-section-head ff-fade-up">
+          <p class="ff-eyebrow ff-eyebrow-green">Why it matters</p>
+          <h2 class="ff-h2">Focus is a practice, not a personality trait.</h2>
+          <p class="ff-section-sub">Nobody is born focused. It's a handful of small, repeatable choices — FocusFlow just makes them easier to keep.</p>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-md-4 ff-fade-up">
+            <div class="card ff-feature-card h-100">
+              <div class="ff-icon-badge ff-icon-blue">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3.5 2"></path></svg>
+              </div>
+              <h3 class="ff-feature-title">Better Time Management</h3>
+              <p class="ff-feature-text">Structure your day around energy, not urgency, so the hours that matter most get protected first.</p>
+            </div>
+          </div>
+          <div class="col-md-4 ff-fade-up" style="--ff-delay:100ms">
+            <div class="card ff-feature-card h-100">
+              <div class="ff-icon-badge ff-icon-green">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><line x1="3" y1="3" x2="21" y2="21"></line></svg>
+              </div>
+              <h3 class="ff-feature-title">Reduced Distractions</h3>
+              <p class="ff-feature-text">Small interruptions compound quietly. FocusFlow helps you notice the pattern and close the gaps.</p>
+            </div>
+          </div>
+          <div class="col-md-4 ff-fade-up" style="--ff-delay:200ms">
+            <div class="card ff-feature-card h-100">
+              <div class="ff-icon-badge ff-icon-blue">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"></path><path d="M15 7h6v6"></path></svg>
+              </div>
+              <h3 class="ff-feature-title">Consistent Growth</h3>
+              <p class="ff-feature-text">Tiny, repeatable habits beat the occasional burst of motivation — every single time.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ DAILY HABITS TRACKER ============ -->
+    <section class="ff-section ff-section-tint" id="habits">
+      <div class="container">
+        <div class="ff-section-head ff-fade-up">
+          <p class="ff-eyebrow ff-eyebrow-blue">Daily habits</p>
+          <h2 class="ff-h2">Four habits, tracked simply.</h2>
+          <p class="ff-section-sub">Check off what you finished today. Your ring fills in as you go — no accounts, no friction.</p>
+        </div>
+
+        <div class="ff-habit-summary ff-fade-up">
+          <div class="ff-habit-ring-wrap">
+            <svg class="ff-ring ff-ring-sm" viewBox="0 0 120 120" aria-hidden="true">
+              <circle class="ff-ring-track" cx="60" cy="60" r="50"></circle>
+              <circle class="ff-ring-progress" id="habitRing" cx="60" cy="60" r="50"></circle>
+            </svg>
+            <div class="ff-ring-center ff-ring-center-sm">
+              <span class="ff-ring-number" id="habitRingNumber">0</span><span class="ff-ring-percent">%</span>
+            </div>
+          </div>
+          <div>
+            <p class="ff-habit-count" id="habitCounter" aria-live="polite">0 of 4 habits completed today</p>
+            <p class="ff-habit-encourage" id="habitEncourage">Tap a habit below to mark it complete.</p>
+          </div>
+        </div>
+
+        <div class="row g-4 mt-2">
+          <div class="col-sm-6 col-lg-3">
+            <article class="card ff-habit-card" data-habit-card>
+              <div class="ff-icon-badge ff-icon-green ff-icon-sm">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 4h7a4 4 0 0 1 4 4v12a3 3 0 0 0-3-3H2z"></path><path d="M22 4h-7a4 4 0 0 0-4 4v12a3 3 0 0 1 3-3h8z"></path></svg>
+              </div>
+              <h3 class="ff-habit-title">Reading</h3>
+              <p class="ff-habit-desc">15 minutes, any book</p>
+              <button type="button" class="btn ff-habit-btn" data-habit-toggle aria-pressed="false">
+                <span class="ff-habit-btn-text">Mark complete</span>
+              </button>
+            </article>
+          </div>
+          <div class="col-sm-6 col-lg-3">
+            <article class="card ff-habit-card" data-habit-card>
+              <div class="ff-icon-badge ff-icon-blue ff-icon-sm">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="13" cy="4" r="2"></circle><path d="M5 22l3-7 2-2 2 3 4 1"></path><path d="M9 14l1.5-5L14 8l2 3h3"></path></svg>
+              </div>
+              <h3 class="ff-habit-title">Exercise</h3>
+              <p class="ff-habit-desc">20-minute walk or workout</p>
+              <button type="button" class="btn ff-habit-btn" data-habit-toggle aria-pressed="false">
+                <span class="ff-habit-btn-text">Mark complete</span>
+              </button>
+            </article>
+          </div>
+          <div class="col-sm-6 col-lg-3">
+            <article class="card ff-habit-card" data-habit-card>
+              <div class="ff-icon-badge ff-icon-green ff-icon-sm">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M19 5l-2 2M7 17l-2 2"></path></svg>
+              </div>
+              <h3 class="ff-habit-title">Meditation</h3>
+              <p class="ff-habit-desc">10 minutes of quiet breathing</p>
+              <button type="button" class="btn ff-habit-btn" data-habit-toggle aria-pressed="false">
+                <span class="ff-habit-btn-text">Mark complete</span>
+              </button>
+            </article>
+          </div>
+          <div class="col-sm-6 col-lg-3">
+            <article class="card ff-habit-card" data-habit-card>
+              <div class="ff-icon-badge ff-icon-blue ff-icon-sm">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+              </div>
+              <h3 class="ff-habit-title">Learning</h3>
+              <p class="ff-habit-desc">One lesson or short tutorial</p>
+              <button type="button" class="btn ff-habit-btn" data-habit-toggle aria-pressed="false">
+                <span class="ff-habit-btn-text">Mark complete</span>
+              </button>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PRODUCTIVITY TOOLS ============ -->
+    <section class="ff-section" id="tools">
+      <div class="container">
+        <div class="ff-section-head ff-fade-up">
+          <p class="ff-eyebrow ff-eyebrow-green">Your toolkit</p>
+          <h2 class="ff-h2">Everything you need, nothing you don't.</h2>
+          <p class="ff-section-sub">Six tools, one calm workspace. Each one does a single job well.</p>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-sm-6 col-lg-4 ff-fade-up">
+            <div class="card ff-tool-card h-100">
+              <div class="ff-icon-badge ff-icon-blue ff-icon-sm">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"></path><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path></svg>
+              </div>
+              <h3 class="ff-tool-title">Task Planner</h3>
+              <p class="ff-tool-text">Lay out today's work in order of what actually matters.</p>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-4 ff-fade-up" style="--ff-delay:80ms">
+            <div class="card ff-tool-card h-100">
+              <div class="ff-icon-badge ff-icon-green ff-icon-sm">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="13" r="8"></circle><path d="M12 9v4l2.5 1.5"></path><path d="M9 2h6"></path></svg>
+              </div>
+              <h3 class="ff-tool-title">Pomodoro Timer</h3>
+              <p class="ff-tool-text">Work in focused sprints with built-in breaks that actually happen.</p>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-4 ff-fade-up" style="--ff-delay:160ms">
+            <div class="card ff-tool-card h-100">
+              <div class="ff-icon-badge ff-icon-blue ff-icon-sm">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><circle cx="12" cy="12" r="5"></circle><circle cx="12" cy="12" r="1"></circle></svg>
+              </div>
+              <h3 class="ff-tool-title">Goal Tracker</h3>
+              <p class="ff-tool-text">Set a target, watch your weekly progress without the guesswork.</p>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-4 ff-fade-up">
+            <div class="card ff-tool-card h-100">
+              <div class="ff-icon-badge ff-icon-green ff-icon-sm">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path><path d="M8 7h8M8 11h6"></path></svg>
+              </div>
+              <h3 class="ff-tool-title">Notes System</h3>
+              <p class="ff-tool-text">Capture a thought once, find it again without searching twice.</p>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-4 ff-fade-up" style="--ff-delay:80ms">
+            <div class="card ff-tool-card h-100">
+              <div class="ff-icon-badge ff-icon-blue ff-icon-sm">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="17" rx="2"></rect><path d="M3 9h18M8 2v4M16 2v4"></path><path d="M9 14l2 2 4-4"></path></svg>
+              </div>
+              <h3 class="ff-tool-title">Weekly Review</h3>
+              <p class="ff-tool-text">Five minutes on Sunday to see what worked and adjust next week.</p>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-4 ff-fade-up" style="--ff-delay:160ms">
+            <div class="card ff-tool-card h-100">
+              <div class="ff-icon-badge ff-icon-green ff-icon-sm">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"></path><path d="M7 15l4-5 3 3 5-7"></path></svg>
+              </div>
+              <h3 class="ff-tool-title">Progress Dashboard</h3>
+              <p class="ff-tool-text">One glance tells you exactly where the week stands.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ INTERACTIVE GOAL GENERATOR ============ -->
+    <section class="ff-section ff-section-tint" id="goals">
+      <div class="container">
+        <div class="ff-section-head ff-fade-up">
+          <p class="ff-eyebrow ff-eyebrow-blue">Plan it out</p>
+          <h2 class="ff-h2">Tell us your week. We'll sketch a plan.</h2>
+          <p class="ff-section-sub">Pick a focus area, your available hours, and how hard you want to push. FocusFlow does the splitting.</p>
+        </div>
+
+        <div class="row g-4 align-items-start">
+          <div class="col-lg-5 ff-fade-up">
+            <form class="card ff-goal-form" id="goalForm" novalidate>
+              <div class="mb-4">
+                <label for="goalCategory" class="form-label ff-form-label">Goal category</label>
+                <select class="form-select ff-select" id="goalCategory" name="goalCategory">
+                  <option value="coding">Coding &amp; Development</option>
+                  <option value="study">Academic Study</option>
+                  <option value="fitness">Fitness &amp; Health</option>
+                  <option value="creative">Creative Practice</option>
+                  <option value="career">Career Growth</option>
+                </select>
+              </div>
+
+              <div class="mb-4">
+                <div class="d-flex justify-content-between">
+                  <label for="goalHours" class="form-label ff-form-label">Available hours per week</label>
+                  <span class="ff-range-value" id="goalHoursValue">8</span>
+                </div>
+                <input type="range" class="form-range ff-range" id="goalHours" min="1" max="30" value="8">
+              </div>
+
+              <div class="mb-4">
+                <label class="form-label ff-form-label d-block">Difficulty level</label>
+                <div class="ff-segmented" role="radiogroup" aria-label="Difficulty level">
+                  <input type="radio" class="btn-check" name="difficulty" id="diffLight" value="light" autocomplete="off">
+                  <label class="ff-segmented-btn" for="diffLight">Light</label>
+
+                  <input type="radio" class="btn-check" name="difficulty" id="diffBalanced" value="balanced" autocomplete="off" checked>
+                  <label class="ff-segmented-btn" for="diffBalanced">Balanced</label>
+
+                  <input type="radio" class="btn-check" name="difficulty" id="diffIntensive" value="intensive" autocomplete="off">
+                  <label class="ff-segmented-btn" for="diffIntensive">Intensive</label>
+                </div>
+              </div>
+
+              <button type="submit" class="btn ff-btn-primary w-100">Generate My Plan</button>
+            </form>
+          </div>
+
+          <div class="col-lg-7 ff-fade-up" style="--ff-delay:100ms">
+            <div class="card ff-goal-output" id="goalOutput" aria-live="polite">
+              <div class="ff-goal-empty" id="goalEmptyState">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                <p>Your personalized weekly plan will appear here once you generate it.</p>
+              </div>
+              <div id="goalResult" class="d-none"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SUCCESS STORIES ============ -->
+    <section class="ff-section" id="stories">
+      <div class="container">
+        <div class="ff-section-head ff-fade-up">
+          <p class="ff-eyebrow ff-eyebrow-green">Real progress</p>
+          <h2 class="ff-h2">People who found their rhythm.</h2>
+          <p class="ff-section-sub">Small, steady habits — these are the kinds of results they tend to add up to.</p>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-md-4 ff-fade-up">
+            <article class="card ff-story-card h-100">
+              <div class="ff-avatar ff-avatar-blue" aria-hidden="true">AM</div>
+              <h3 class="ff-story-name">Aanya Mehta</h3>
+              <p class="ff-story-achieve">Finished a 90-day coding streak</p>
+              <p class="ff-story-quote">"I stopped trying to find two free hours and started protecting twenty-five minutes instead. That's the part that actually stuck."</p>
+            </article>
+          </div>
+          <div class="col-md-4 ff-fade-up" style="--ff-delay:100ms">
+            <article class="card ff-story-card h-100">
+              <div class="ff-avatar ff-avatar-green" aria-hidden="true">DB</div>
+              <h3 class="ff-story-name">Daniel Brooks</h3>
+              <p class="ff-story-achieve">Read 24 books this year</p>
+              <p class="ff-story-quote">"The habit ring sounds small, but watching it fill in every evening is the reason I didn't quit in week two."</p>
+            </article>
+          </div>
+          <div class="col-md-4 ff-fade-up" style="--ff-delay:200ms">
+            <article class="card ff-story-card h-100">
+              <div class="ff-avatar ff-avatar-blue" aria-hidden="true">LO</div>
+              <h3 class="ff-story-name">Lina Osei</h3>
+              <p class="ff-story-achieve">Cut weekly screen time by 40%</p>
+              <p class="ff-story-quote">"I didn't need another app to track everything. I needed one place that made four habits impossible to forget."</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ TECHNOLOGY SHOWCASE ============ -->
+    <section class="ff-section ff-section-tint" id="tech">
+      <div class="container">
+        <div class="ff-section-head ff-fade-up">
+          <p class="ff-eyebrow ff-eyebrow-blue">Built with</p>
+          <h2 class="ff-h2">How this project comes together.</h2>
+          <p class="ff-section-sub">FocusFlow is built from four layers, each handling a clear piece of the experience.</p>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-sm-6 col-lg-3 ff-fade-up">
+            <div class="card ff-tech-card h-100">
+              <h3 class="ff-tech-title">HTML</h3>
+              <p class="ff-tech-text">Structure and meaning.</p>
+              <div class="ff-tag-row">
+                <span class="ff-tag">Semantic sections</span>
+                <span class="ff-tag">Forms</span>
+                <span class="ff-tag">Accessibility</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-3 ff-fade-up" style="--ff-delay:80ms">
+            <div class="card ff-tech-card h-100">
+              <h3 class="ff-tech-title">CSS</h3>
+              <p class="ff-tech-text">Look, feel, and motion.</p>
+              <div class="ff-tag-row">
+                <span class="ff-tag">Custom styling</span>
+                <span class="ff-tag">Animations</span>
+                <span class="ff-tag">Responsive design</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-3 ff-fade-up" style="--ff-delay:160ms">
+            <div class="card ff-tech-card h-100">
+              <h3 class="ff-tech-title">Bootstrap</h3>
+              <p class="ff-tech-text">Layout and components.</p>
+              <div class="ff-tag-row">
+                <span class="ff-tag">Grid system</span>
+                <span class="ff-tag">Navbar</span>
+                <span class="ff-tag">Cards</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-3 ff-fade-up" style="--ff-delay:240ms">
+            <div class="card ff-tech-card h-100">
+              <h3 class="ff-tech-title">JavaScript</h3>
+              <p class="ff-tech-text">Interaction and logic.</p>
+              <div class="ff-tag-row">
+                <span class="ff-tag">Habit tracker</span>
+                <span class="ff-tag">Goal generator</span>
+                <span class="ff-tag">Dynamic updates</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="ff-section ff-section-dark" id="contact">
+      <div class="container">
+        <div class="row gy-5 align-items-center">
+          <div class="col-lg-5 ff-fade-up">
+            <p class="ff-eyebrow ff-eyebrow-green-dark">Get in touch</p>
+            <h2 class="ff-h2 ff-h2-dark">Questions, feedback, or a feature idea?</h2>
+            <p class="ff-section-sub ff-sub-dark">Send a note — this form runs entirely in your browser as part of the FocusFlow demo, so nothing is sent anywhere.</p>
+          </div>
+
+          <div class="col-lg-7 ff-fade-up" style="--ff-delay:100ms">
+            <form class="card ff-contact-form" id="contactForm" novalidate>
+              <div class="row g-4">
+                <div class="col-sm-6">
+                  <label for="contactName" class="form-label ff-form-label-dark">Name</label>
+                  <input type="text" class="form-control ff-input-dark" id="contactName" name="name" autocomplete="name">
+                  <p class="ff-error-msg" id="errorName"></p>
+                </div>
+                <div class="col-sm-6">
+                  <label for="contactEmail" class="form-label ff-form-label-dark">Email</label>
+                  <input type="email" class="form-control ff-input-dark" id="contactEmail" name="email" autocomplete="email">
+                  <p class="ff-error-msg" id="errorEmail"></p>
+                </div>
+                <div class="col-12">
+                  <label for="contactMessage" class="form-label ff-form-label-dark">Message</label>
+                  <textarea class="form-control ff-input-dark" id="contactMessage" name="message" rows="4"></textarea>
+                  <p class="ff-error-msg" id="errorMessage"></p>
+                </div>
+                <div class="col-12">
+                  <button type="submit" class="btn ff-btn-primary">Send Message</button>
+                  <p class="ff-form-success" id="formSuccess" aria-live="polite"></p>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="ff-footer">
+    <div class="container">
+      <div class="row gy-4">
+        <div class="col-lg-5">
+          <a class="ff-brand ff-brand-footer" href="#home">
+            <span class="ff-brand-mark" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg>
+            </span>
+            FocusFlow
+          </a>
+          <p class="ff-footer-text">A calm productivity platform built as a full stack development project.</p>
+          <div class="ff-social-row">
+            <a href="#" class="ff-social-icon" aria-label="FocusFlow on X (Twitter)">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4l16 16M20 4L4 20"></path></svg>
+            </a>
+            <a href="#" class="ff-social-icon" aria-label="FocusFlow on Instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="1"></circle></svg>
+            </a>
+            <a href="#" class="ff-social-icon" aria-label="FocusFlow on LinkedIn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="3"></rect><path d="M7 10v7M7 7v.01M12 17v-4.5a2.5 2.5 0 0 1 5 0V17M12 10v7"></path></svg>
+            </a>
+            <a href="#" class="ff-social-icon" aria-label="FocusFlow on GitHub">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"></path></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="col-6 col-lg-2">
+          <h4 class="ff-footer-heading">Product</h4>
+          <ul class="ff-footer-links">
+            <li><a href="#why">Why Focus</a></li>
+            <li><a href="#habits">Habits</a></li>
+            <li><a href="#tools">Tools</a></li>
+            <li><a href="#goals">Goal Plan</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-lg-2">
+          <h4 class="ff-footer-heading">Company</h4>
+          <ul class="ff-footer-links">
+            <li><a href="#stories">Stories</a></li>
+            <li><a href="#tech">Tech Stack</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-lg-2">
+          <h4 class="ff-footer-heading">Legal</h4>
+          <ul class="ff-footer-links">
+            <li><a href="#">Privacy</a></li>
+            <li><a href="#">Terms</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="ff-footer-bottom">
+        <p>© 2026 FocusFlow. Built as a full stack development assignment.</p>
+      </div>
+    </div>
+  </footer>
+
+  <button type="button" class="ff-back-to-top" id="backToTop" aria-label="Back to top">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"></path></svg>
+  </button>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
